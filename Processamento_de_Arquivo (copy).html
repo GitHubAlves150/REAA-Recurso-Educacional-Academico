@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>REAA</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel="stylesheet" type='text/css' href="Estilo.css">
+
+    <script src='main.js'></script>
+
+
+</head>
+
+<body>
+    <div id="interface">
+
+        <header id="cabecalho">
+            <hgroup id="logo-cabecalho">
+                <img src="REAA-Logo001.PNG">
+
+            </hgroup>
+
+            <nav id="menu">
+                <ul>
+                    <h2>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="conteudo.html">CONTEUDO</a></li>
+                    </h2>
+                </ul>
+            </nav>
+        </header>
+        <section id="conf-aulas">
+
+            <div id="Aulas">
+                <div id="Aulas">
+                    <hgroup id="saudacoes">
+                        <h2>Processamento de Arquivos .txt e .csv</h2>
+                    </hgroup>
+                    <br>
+                    <br>
+                    <p>
+                        Essa parte de processamento ou manipulação de arquivos, digo eu que é a parte mais prazerosa
+                        desta jornada. Pois é possível armazenar
+                        dados mesmo depois de fechar o programa. Também é possivél ler os dados armazenados nele. O
+                        melhor de tudo,
+                        é o gosto de colocar tudo em prática o que já foi aprendido pra dentro do arquivo só pra ver ele
+                        armazenado.
+                    </p>
+
+                    <p>
+                        A sintaxe da manipulação de arquivos é o que segue a baixo, e com esta pequena construção você
+                        pode criar outros arranjos
+                        de programa.
+                    </p>
+                    <p>
+                        Primeiramente, vou começar armazenando num arquivo .txt ou seja <font color="gray">
+                            <em>escrevendo</em>
+                        </font> num arquivo, que é um bloco de notas
+                        qualquer, depois vou
+                        armazenar dados num arquivo .csv que é a planilha do Exel. E você vai ver que além de deferente
+                        é mais organizado.
+                    </p>
+                    <pre>
+                    <code>
+                            #include &lt;iostream&gt;
+                            using namespace std;
+                            
+                            #include &lt;cstdlib&gt;
+                            using std::exit;
+                            
+                            #include &lt;iomanip&gt;
+                            using std::setw;
+                            
+                            #include &lt;fstream&gt;
+                            using std::ofstream;//para trabalhar com arquivos
+                            
+                            
+                            int main()
+                            {
+                                <font color="gray">//Boas vindas</font>
+                                cout &lt;&lt; "Hello REAA!" &lt;&lt; endl;
+                            
+                                float resultado=60;
+                                <font color="gray">//Gera o arquivo se caso não existir.</font>
+                                <font color="green">ofstream Arquivo("Arquivo.txt", ios::out);</font>
+                                <font color="gray">//Verifica se o arquivo foi aberto com exidô</font>
+                                if(!Arquivo)
+                                {
+                                    cout &lt;&lt; "Sem sucesso ao abrir o arquivo:" &lt;&lt; endl;
+                                    exit(1);<font color="gray">//Aborta o programa, se caso não rolar.</font>
+                                }
+                            
+                                cout &lt;&lt; "Arquivo aberto com sucesso: " &lt;&lt; endl;
+                            
+                                Arquivo &lt;&lt;resultado &lt;&lt; setw(3) &lt;&lt; "Hz" &lt;&lt; "Padrão Brazil." &lt;&lt;endl;
+                                Arquivo &lt;&lt; "======================";
+                            
+                                Arquivo.close();<font color="gray">//Fecha o arquivo</font>
+                                while(1);
+                                return 0;
+                            }
+                            
+                    </code>
+                </pre>
+
+                    <p>
+                        Usamos o objeto <em>ofstream</em> para especificar a saida de dados e ir direto para dentro de
+                        um arquivo, ou seja, <font color="gray"><em>Out File Stream</em></font>
+                        .Pensa que <em>ofstream</em> é o <em>cout &lt;&lt;</em> mas em vez de ser mostrado no console, é
+                        mostrado dentro de um arquivo cuja extensão você mesmo definiu.
+                    </p>
+                    <figure class="Foto-AllanKay">
+                        <img src="saidaDadosArquivoComSeta.PNG" />
+                        <figcaption>
+                            <img src="saidaDadosArquivoResultado.PNG" />
+                    </figcaption>
+                    
+                </div>
+                <p>
+                    Agora vejamos com arquivo .csv, nota-se que no arquivo .csv, as células da planilha é separada por
+                    vírgula ou ponto e vírgula, coisa que não dá pra ver na própria planilha.
+                </p>
+                <figure class="Foto-AllanKay">
+                    <img src="ArquivoCSV.png" />
+                    <figcaption>
+                        <img src="ArquivoCSVAberto.PNG" />
+                </figcaption>
+                
+            </div>
+            <p>
+                Para finalizar esta parte de escrita em arquivo, deixo outro codigo de exemplo para inspirar a prática.
+                O código abaixo é uma adaptação do código acima com inclusão de data e hora, e um if-else dentro do while
+                para alterar o status do log de registro de um sensor hipotético. Caso a temperatura e nivel estiverem acima de 5
+                o status muda para ON.
+            </p>
+
+
+        </section>
+
+        <!--Rodapé-->
+        <footer id="rodape">
+            <p>
+                by Lucas Lorenço Alves | senoratec.io@gmail.com |
+                <a href="https://www.linkedin.com/in/lucas-lorenço-alves-4206b9201/" target="_blank">linkedin</a>
+            </p>
+        </footer>
+
+    </div>
+</body>
+
+</html>
+
+
+
+
+<!--<p>
+    Para finalizar esta parte de escrita em arquivo, deixo outro codigo de exemplo para inspirar a prática.
+    O código abaixo é uma adaptação do código acima com inclusão de data e hora, e um if-else dentro do while
+    para alterar o status do log de registro de um sensor hipotético. Caso a temperatura e nivel estiverem acima de 5
+    o status muda para ON.
+</p>-->

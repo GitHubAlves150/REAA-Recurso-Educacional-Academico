@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>REAA</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>  
+   <link rel="stylesheet" type='text/css' href="Estilo.css">
+    <script src='main.js'></script>
+
+
+</head>
+
+<body>
+    <div id="interface">
+
+        <header id="cabecalho">
+            <hgroup id="logo-cabecalho">
+                <img src="REAA-Logo001.PNG">
+
+            </hgroup>
+
+            <nav id="menu">
+                <ul>
+                    <h2>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="conteudo.html">CONTEUDO</a></li>
+                    </h2>
+                </ul>
+            </nav>
+        </header>
+        <section id="corpo">
+           <pre>
+            <code>
+        <font color="gray">Arquivo .hpp</font>
+        #ifndef SOBRECARGAOPERADORES_H
+        #define SOBRECARGAOPERADORES_H
+
+
+        class operador
+        {
+        public:
+            operador(int=0, int=0, int=0);
+
+            operador operator+(operador);
+            int getHora();
+            int getMinutos();
+            int getSegundos();
+
+        private:
+            int     hora,
+                minutos,
+                segundos;
+
+        };
+
+        #endif //SOBRECARGAOPERADORES_H
+
+            </code>
+           </pre>
+______________________________________________________________________
+
+<pre>
+    <code>
+            <font color="gray">Arquivo .cpp</font>
+            #include <iostream>
+            using namespace::std;
+            
+            
+            #include "sobrecargaOperadores.hpp"
+            <font color="gray"> //Atualiza os membros de dados</font>           
+            operador::operador(int h, int m, int s)
+            {
+                hora    =h;
+                minutos =m;
+                segundos=s;
+            }
+            <font color="gray">//sobrecarrega o operador +</font>
+            operador operador::operator+(operador Time)
+            {
+                hora      =hora+Time.hora;
+                minutos   =minutos+Time.minutos;
+                segundos  =segundos+Time.segundos;
+                return operador(hora, minutos, segundos);
+            }
+            
+            
+            int operador::getHora()
+            {
+                return hora;
+            }
+            int operador::getMinutos()
+            {
+                return minutos;
+            }
+            int operador::getSegundos()
+            {
+                return segundos;
+            }
+            
+    </code>
+</pre>
+
+        </section>
+
+
+        <!--Lateral direito-->
+        <aside id="Lateral">
+            <article id="div-lateral">
+                
+                <pre>
+                    <code>
+<font color="gray">//Arquivo main.cpp</font>
+<font color="gray">
+/*
+O programa a baixo faz uma soma de horas, 
+minutos e segundos com a hora atual.
+*/</font>
+#include <iostream>
+using namespace std;
+#include "sobrecargaOperadores.hpp"
+
+int main()
+{
+    cout &lt;&lt; "Hello REAA!" &lt;&lt; endl;
+
+    operador Relogio(2, 50, 0),
+             Daqui(3, 0, 0),
+             horaAtual;
+
+
+    cout&lt;&lt;"Hora atual: "
+        &lt;&lt;Relogio.getHora()
+        &lt;&lt;":"
+        &lt;&lt;Relogio.getMinutos()
+        &lt;&lt;":"
+        &lt;&lt;Relogio.getSegundos()
+        &lt;&lt;"mim"
+        &lt;&lt;endl;
+
+    horaAtual=Relogio+Daqui;
+
+    cout&lt;&lt;"Hora atual: "
+        &lt;&lt;horaAtual.getHora()
+        &lt;&lt;":"
+        &lt;&lt;horaAtual.getMinutos()
+        &lt;&lt;":"
+        &lt;&lt;horaAtual.getSegundos()
+        &lt;&lt;"mim"
+        &lt;&lt;endl;
+}
+
+                    </code>
+                </pre>
+                <figure class="saida_codigo">
+                    <img src="Screenshot from 2024-02-19 00-08-24.png" />
+                    <figcaption>
+                        <h5>
+                            Hora atualizada... 
+                        </h5>
+                    </figcaption>
+                </figure>
+                   
+
+            </article>
+        </aside>
+
+        <!--Rodapé-->
+        <footer id="rodape">
+            <p>
+                by Lucas Lorenço Alves | senoratec.io@gmail.com | 
+                <a href="https://www.linkedin.com/in/lucas-lorenço-alves-4206b9201/" target="_blank">linkedin</a>
+            </p>
+
+        </footer>
+
+    </div>
+</body>
+
+</html>
