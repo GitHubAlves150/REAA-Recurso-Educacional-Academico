@@ -7,7 +7,7 @@
     <title>REAA</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <link rel="stylesheet" type='text/css' href="_CSS/Conteudo.css">
+    <link rel="stylesheet" type='text/css' href="Estilo.css">
 
     <script src='main.js'></script>
 
@@ -19,7 +19,7 @@
 
         <header id="cabecalho">
             <hgroup id="logo-cabecalho">
-                <img src="_IMAGENS/REAA-Logo001.PNG">
+                <img src="REAA-Logo001.PNG">
 
             </hgroup>
 
@@ -32,15 +32,78 @@
                 </ul>
             </nav>
         </header>
+        <section id="conf-aulas">
+
         <div id="Aulas">
-            <p>
-                [TEXTO]
-            </p>
+            <div id="Aulas">
+                <hgroup id="saudacoes">
+                    <h2>Classe string</h2>
+                </hgroup>
+                <br>
+                <br>
+                <p>
+                    Em C, a manipulação de uma string acontece por meio de uma sequência de caracteres
+                    disposta um caractere em cada memória como é o caso abaixo.
+                    <pre>
+                        <code>
+                            int mai()
+                            {
+
+                                char nome[6]="Lucas";
+                                printf("%c", nome[0]);<font color="gray">//L está em algum endereço de memória</font> 
+                                printf("%c", nome[1]);<font color="gray">//u está em algum endereço de memória</font> 
+                                printf("%c", nome[2]);<font color="gray">//c está em algum endereço de memória</font>
+                                printf("%c", nome[3]);<font color="gray">//a está em algum endereço de memória</font> 
+                                printf("%c", nome[4]);<font color="gray">//s está em algum endereço de memória</font> 
+
+
+                            }
+                        </code>
+                    </pre>
+
+                </p>
+<p>
+    Este estilo de string em C, é preciso ter cuidado, pois como a manipulação é por responsabilidade do 
+    programador, então se fizer algum acesso fora da matriz. Vai acabar invadindo outros espaço da memória
+    ocasionando algum distúrbio no funcionamento do programa.
+</p>
+<p>
+    Mas! Em C++ a classe string se encarrega de tratar dessas manipulações sozinha, como é o caso da inclusão 
+    do valor nulo no final da stringe entre outras. Para cada string declarada ela se torna um objeto da classe
+    <em>string</em> podendo assim chamar funções membros da classe. Mas também podemos tratara string como um vetor
+    de dados da mesma forma que tratamos um array de caractere em C. Veja
+    <pre>
+        <code>
+                            #include &lt;string&gt;
+                            using std::string;
+
+                            int main()
+                            {
+
+                                string str_1("Lucas");
+                                cout &lt;&lt; str_1 &lt;&lt; endl;
+
+                                cout &lt;&lt; str_1[0] &lt;&lt; endl;<font color="gray">//Pode se manipulada caractere por caractere</font>
+                                cout &lt;&lt; str_1[1] &lt;&lt; endl;<font color="gray">//idem</font>
+                                cout &lt;&lt; str_1[2] &lt;&lt; endl;<font color="gray">//idem</font>
+                                cout &lt;&lt; str_1[3] &lt;&lt; endl;<font color="gray">//idem</font>
+                                cout &lt;&lt; str_1[4] &lt;&lt; endl;<font color="gray">//idem</font>
+                                
+                            }
+        </code>
+    </pre>
+</p>
+<p>
+    Se trabalhar a string como um objeto, podemos chamar funções membros para nos retornar um tamanho, comprimento
+    e até mesmo nos retornar um valor de comparação entre duas strings. Como é mostrado no código abaixo.
+</p>
+                
+            </div>
         </div>
 
         
 
-
+    </section>
 
         <!--Rodapé-->
         <footer id="rodape">
