@@ -323,12 +323,14 @@ ul#Lista-Aulas li#Classe-String {
     background-repeat: no-repeat;
 }
 
+/*
 ul#Lista-Aulas li#Programação-Web {
     background: url('progWeb.png');
     background-position: 50% 50%;
     background-size: 200px 200px;
     background-repeat: no-repeat;
 }
+*/
 
 ul#Lista-Aulas li#Pesquisa {
     background: url('Pesquisa.png');
