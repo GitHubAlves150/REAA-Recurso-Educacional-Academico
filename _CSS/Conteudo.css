@@ -2,8 +2,8 @@
 
 @font-face {
     font-family: 'Fonte-Logo';
-    src: url("../_Fontes/bubblegum-sans-regular.otf");z
-    src: url("../_Fontes/Dosis/Dosis-VariableFont_wght.ttf");
+    src: url("../_Fontes/bubblegum-sans-regular.otf");
+    src: url("../_Fontes/Dosis/Dosis-VariableFont_wght.ttf");   
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200&family=Titillium+Web:wght@200&display=swap');
@@ -215,6 +215,15 @@ ul#Lista-Aulas li#Introducao-ao-C {
     background-repeat: no-repeat;        
     
 }
+
+ul#Lista-Aulas li#plus {
+    background: url('../_IMAGENS/intrudução\ a\ C++.png');
+    background-position: 50% 50%;
+    background-size: 200px 200px;
+    background-repeat: no-repeat;        
+    
+}
+
 
 
 
