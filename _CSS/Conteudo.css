@@ -216,14 +216,22 @@ ul#Lista-Aulas li#Introducao-ao-C {
     
 }
 
-ul#Lista-Aulas li#plus {
-    background: url('../_IMAGENS/intrudução\ a\ C++.png');
+
+ul#Lista-Aulas li#Prog {
+    background: url('../_IMAGENS/icons8-c++-1048.png');
     background-position: 50% 50%;
     background-size: 200px 200px;
     background-repeat: no-repeat;        
     
 }
 
+ul#Lista-Aulas li#Introducao-ao {
+    background: url('../_IMAGENS/intrudução\ a\ C++.png');
+    background-position: 50% 50%;
+    background-size: 200px 200px;
+    background-repeat: no-repeat;        
+    
+}
 
 
 
